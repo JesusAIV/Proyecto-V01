@@ -137,6 +137,10 @@ a {
 .section_options{
     padding: 0.7rem 1rem;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - var(--header-height));
+    justify-content: space-evenly;
 }
 
 .section_options a {
