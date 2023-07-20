@@ -1,0 +1,193 @@
+@font-face {
+    font-family: 'TimesNewRomance';
+    src: url('../fonts/TimesNewRomance.woff2') format('woff2'),
+        url('../fonts/TimesNewRomance.woff') format('woff'),
+        url('../fonts/TimesNewRomance.otf') format('opentype'),
+        url('../fonts/TimesNewRomance.ttf') format('truetype');
+    /* Agrega más formatos si lo deseas */
+    /* Puedes especificar más estilos y pesos si la fuente los tiene */
+}
+
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --imperial-red: #FB3640;
+    --polynesian-blue: #1F487E;
+    --asparagus: #69995D;
+    --carolina-blue: #84ACCE;
+    --sunglow: #FFC857;
+    --margin-sidebar: 88px;
+    --size-icon: 1.2rem;
+    --header-height: 3rem;
+}
+
+body {
+    position: relative;
+    margin: var(--header-height) 0 0 0;
+    padding: 0 1rem;
+    transition: .5s;
+    padding-left: calc(var(--margin-sidebar) + 2rem);
+}
+
+a {
+    text-decoration: none;
+}
+
+.body-pd {
+    padding-left: calc(var(--margin-sidebar) + 188px) !important;
+}
+
+.header_sidebar {
+    width: 100%;
+    height: calc(var(--header-height) + 1rem);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: var(--polynesian-blue);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem 0 calc(var(--margin-sidebar) + 2rem);
+    transition: .5s;
+}
+
+.header_toggle i {
+    color: var(--sunglow);
+    font-size: var(--size-icon);
+    cursor: pointer;
+}
+
+.header_options {
+    display: flex;
+    align-items: center;
+    color: var(--sunglow);
+    gap: 20px;
+}
+
+.option_notification {
+    position: relative;
+    font-size: var(--size-icon);
+    cursor: pointer;
+}
+
+.option_input .input_search {
+    background: transparent;
+    outline: none;
+    border: 0;
+    border-bottom: 2px solid var(--sunglow);
+    color: var(--sunglow);
+    padding: 2px;
+}
+
+.option_search {
+    font-size: var(--size-icon);
+    cursor: pointer;
+}
+
+.option_notification .notification_number {
+    position: absolute;
+    right: -7px;
+    top: -10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--sunglow);
+    color: var(--polynesian-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+.option_profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.option_profile .profile_image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.option_profile .profile_data{
+    font-family: 'TimesNewRomance';
+}
+
+.profile_data .data_name{
+    font-weight: 800;
+}
+
+.profile_data .data_role{
+    font-weight: 100;
+}
+
+.section_options{
+    padding: 0.7rem 1rem;
+    overflow: hidden;
+}
+
+.section_options a {
+    color: var(--sunglow);
+    font-size: var(--size-icon);
+    font-family: 'TimesNewRomance';
+    overflow: hidden;
+}
+
+.section_sidebar {
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: var(--polynesian-blue);
+    width: var(--margin-sidebar);
+    transition: .5s;
+}
+
+.section_sidebar-show{
+    width: calc(var(--margin-sidebar) + 156px);
+}
+
+.section_logo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.7rem 0;
+}
+
+.section_logo img{
+    width: 40px;
+    height: 40px;
+}
+
+.nav_link{
+    display: grid;
+    grid-template-columns: max-content max-content;
+    align-items: center;
+    column-gap: 1.5rem;
+    padding: 0.6rem 0.5rem 0.6rem 1.1rem;
+}
+
+.link_active{
+    background-color: #FFFFFF;
+    color: var(--polynesian-blue) !important;
+    border-radius: 1rem;
+}
+
+.body_sidebar{
+    margin-top: 90px;
+}
