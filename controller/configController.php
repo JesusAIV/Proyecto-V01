@@ -73,4 +73,40 @@ class configController{
 
         return $page;
     }
+
+    /**
+     * Ruta a estilos css
+     *
+     * @return string retorna la ruta a los estilos css
+     */
+    public function rutaCss(){
+        $ruta = SERVERURL.'view/css/';
+
+        return $ruta;
+    }
+
+    /**
+     * Ruta a scripts js
+     *
+     * @return string retorna la ruta a los scripts js
+     */
+    public function rutaJs(){
+        $ruta = SERVERURL.'view/js/';
+
+        return $ruta;
+    }
+
+    /**
+     * Ruta a imagenes
+     */
+    public function rutaImage($rutaimg){
+        echo SERVERURL."view/img/$rutaimg";
+    }
+
+    /**
+     * Ruta a enlaces
+     */
+    public function rutaLink($enlace){
+        echo SERVERURL.$enlace;
+    }
 }
