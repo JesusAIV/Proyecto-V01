@@ -1,7 +1,6 @@
 @font-face {
     font-family: 'TimesNewRomance';
-    src: url('../fonts/TimesNewRomance.woff2') format('woff2'),
-        url('../fonts/TimesNewRomance.woff') format('woff'),
+    src: url('../fonts/TimesNewRomance.woff') format('woff'),
         url('../fonts/TimesNewRomance.otf') format('opentype'),
         url('../fonts/TimesNewRomance.ttf') format('truetype');
     /* Agrega más formatos si lo deseas */
@@ -34,6 +33,39 @@ body {
     padding: 0 1rem;
     transition: .5s;
     padding-left: calc(var(--margin-sidebar) + 2rem);
+}
+
+/* Estilos para motores Webkit y blink (Chrome, Safari, Opera... )*/
+
+body::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+body::-webkit-scrollbar:vertical {
+    width:10px;
+}
+
+body::-webkit-scrollbar-button:increment,body::-webkit-scrollbar-button {
+    display: none;
+}
+
+body::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--polynesian-blue);
+    border-radius: 20px;
+}
+
+body::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+body {
+    /*Estilos estándar experimentales (Principalmente Firefox)*/
+    scrollbar-color: rgba(0, 0, 0, .5) rgba(0, 0, 0, 0);
+    scrollbar-width: thin;
 }
 
 a {
@@ -194,4 +226,125 @@ a {
 
 .body_sidebar{
     margin-top: 90px;
+}
+
+.reports_content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.report_body{
+    background-color: var(--carolina-blue);
+    border-radius: 15px;
+    padding: 10px 25px;
+    text-align: center;
+    font-family: 'TimesNewRomance';
+    color: var(--polynesian-blue);
+}
+
+.report_icon img{
+    width: 80%;
+}
+
+.repors_details{
+    height: 400px;
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.details_chart {
+    border: 1px solid var(--polynesian-blue);
+    border-radius: 20px;
+    padding: 0 10px;
+}
+
+.details_container-table{
+    background-color: var(--carolina-blue);
+    border-radius: 20px;
+    padding: 25px 20px;
+    height: 400px;
+}
+
+.table_title span{
+    color: var(--polynesian-blue);
+    font-family: 'TimesNewRomance';
+    font-size: 1.2rem;
+}
+
+.container_table{
+    height: 320px;
+    margin: 15px 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border: 2px solid var(--polynesian-blue);
+    color: var(--polynesian-blue);
+    font-family: 'TimesNewRomance';
+}
+
+/* Estilos para motores Webkit y blink (Chrome, Safari, Opera... )*/
+
+.container_table::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.container_table::-webkit-scrollbar:vertical {
+    width:10px;
+}
+
+.container_table::-webkit-scrollbar-button:increment,.container_table::-webkit-scrollbar-button {
+    display: none;
+}
+
+.container_table::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+.container_table::-webkit-scrollbar-thumb {
+    background-color: var(--polynesian-blue);
+    border-radius: 20px;
+}
+
+.container_table::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+.container_table {
+    /*Estilos estándar experimentales (Principalmente Firefox)*/
+    scrollbar-color: rgba(0, 0, 0, .5) rgba(0, 0, 0, 0);
+    scrollbar-width: thin;
+}
+
+.table_content{
+    border-collapse: collapse;
+    width: 100%;
+    height: auto;
+    background-color: #FFFFFF;
+    text-align: center;
+    overflow: hidden;
+}
+
+.table_content th{
+    border-bottom: 1px solid var(--polynesian-blue);
+    font-weight: 800;
+}
+
+.table_content th,
+.table_content td{
+    padding: 10px 0;
+    border-bottom: 1px solid var(--polynesian-blue);
+    border-right: 1px solid var(--polynesian-blue);
+}
+
+.table_stock span{
+    /* background-color: var(--imperial-red); */
+    background-color: var(--asparagus);
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: #FFFFFF;
+    font-size: 0.8rem;
 }
