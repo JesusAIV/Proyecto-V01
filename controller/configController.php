@@ -109,4 +109,13 @@ class configController{
     public function rutaLink($enlace){
         echo SERVERURL.$enlace;
     }
+
+    /**
+     * Página activa
+     */
+    public function pageActive($page){
+        $active = $this->viewUrl();
+
+        echo ($page == $active) ? 'link_active' : 'null' ;
+    }
 }
