@@ -1,90 +1,118 @@
-<div class="header_sidebar" id="header-sidebar">
-    <div class="header_toggle">
-        <i class="fa-regular fa-bars" id="header-toggle"></i>
+<?php
+
+$datos = [
+    [
+        'title' => 'Empleados',
+        'amount' => '20',
+        'url' => 'svg/report_employees.svg'
+    ],
+    [
+        'title' => 'Clientes',
+        'amount' => '12',
+        'url' => 'svg/report_customers.svg'
+    ],
+    [
+        'title' => 'Ventas',
+        'amount' => '29',
+        'url' => 'svg/report_sale.svg'
+    ],
+    [
+        'title' => 'Compras',
+        'amount' => '31',
+        'url' => 'svg/report_shopping.svg'
+    ],
+    [
+        'title' => 'Pedidos',
+        'amount' => '36',
+        'url' => 'svg/report_order.svg'
+    ],
+    [
+        'title' => 'Ingresos',
+        'amount' => '28',
+        'url' => 'svg/report_income.svg'
+    ],
+    [
+        'title' => 'Gastos',
+        'amount' => '42',
+        'url' => 'svg/report_loss.svg'
+    ]
+];
+?>
+
+<div class="reports_content">
+    <?php foreach ($datos as $dato) { ?>
+        <div class="report_body">
+            <div class="report_icon">
+                <img src="<?php $configC->rutaImage($dato['url']) ?>" alt="">
+            </div>
+            <div class="report_title">
+                <span><?php echo $dato['title'] ?></span>
+            </div>
+            <div class="report_amount">
+                <span><?php echo $dato['amount'] ?></span>
+            </div>
+        </div>
+    <?php } ?>
+</div>
+<div class="repors_details">
+    <div class="details_chart">
+        <canvas id="grafico01"></canvas>
     </div>
-    <div class="header_options">
-        <div class="option_input">
-            <input class="input_search">
+    <div class="details_container-table">
+        <div class="table_title">
+            <span>Ventas recientes</span>
         </div>
-        <div class="option_search">
-            <i class="fa-solid fa-magnifying-glass"></i>
-        </div>
-        <div class="option_notification">
-            <i class="fa-regular fa-bell"></i>
-            <div class="notification_number">
-                <span>1</span>
-            </div>
-        </div>
-        <div class="option_profile">
-            <div class="profile_image">
-                <img src="https://avatars.githubusercontent.com/u/90335295?v=4" alt="Foto de perfil">
-            </div>
-            <div class="profile_data">
-                <div class="data_name">
-                    <span>Jesús I.V</span>
-                </div>
-                <div class="data_role">
-                    <span>Super administrador</span>
-                </div>
-            </div>
+        <div class="container_table">
+            <table class="table_content">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Cantidad</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php for ($i=1; $i <= 10; $i++) { ?>
+                        <tr>
+                            <td>Producto 0<?php echo $i ?></td>
+                            <td>5</td>
+                            <td>S/.500</td>
+                        </tr>
+                    <?php } ?>
+                </tbody>
+            </table>
         </div>
     </div>
 </div>
-<div class="section_sidebar" id="nav-bar">
-    <div class="section_logo">
-        <img src="<?php $configC->rutaImage('svg/logo.svg') ?>" alt="Logo de empresa">
+<div class="repors_details">
+    <div class="details_chart">
+        <canvas id="grafico02"></canvas>
     </div>
-    <div class="section_options">
-        <a href="<?php $configC->rutaLink('dashboard') ?>" class="nav_link link_active" id="nav_link">
-            <i class="fa-regular fa-house"></i>
-            <span>Inicio</span>
-        </a>
-        <a href="<?php $configC->rutaLink('ventas') ?>" class="nav_link ">
-            <i class="fa-regular fa-shop"></i>
-            <span>Ventas</span>
-        </a>
-        <a href="<?php $configC->rutaLink('compras') ?>" class="nav_link ">
-            <i class="fa-regular fa-cart-shopping"></i>
-            <span>Compras</span>
-        </a>
-        <a href="<?php $configC->rutaLink('almacen') ?>" class="nav_link ">
-            <i class="fa-regular fa-warehouse"></i>
-            <span>Almacen</span>
-        </a>
-        <a href="<?php $configC->rutaLink('pedidos') ?>" class="nav_link ">
-            <i class="fa-regular fa-truck-ramp-couch"></i>
-            <span>Pedidos</span>
-        </a>
-        <a href="<?php $configC->rutaLink('comprobantes') ?>" class="nav_link ">
-            <i class="fa-regular fa-ballot-check"></i>
-            <span>Comprobantes</span>
-        </a>
-        <a href="<?php $configC->rutaLink('empleados') ?>" class="nav_link ">
-            <i class="fa-regular fa-people-group"></i>
-            <span>Empleados</span>
-        </a>
-        <a href="<?php $configC->rutaLink('proveedores') ?>" class="nav_link ">
-            <i class="fa-regular fa-people-carry-box"></i>
-            <span>Proveedores</span>
-        </a>
-        <a href="<?php $configC->rutaLink('categorias') ?>" class="nav_link ">
-            <i class="fa-regular fa-grid-2"></i>
-            <span>Categorías</span>
-        </a>
-        <a href="<?php $configC->rutaLink('movimientos') ?>" class="nav_link ">
-            <i class="fa-regular fa-money-bill-transfer"></i>
-            <span>Movimientos</span>
-        </a>
-        <a href="<?php $configC->rutaLink('empresa') ?>" class="nav_link ">
-            <i class="fa-regular fa-buildings"></i>
-            <span>Empresa</span>
-        </a>
-        <a href="<?php $configC->rutaLink('configuracion') ?>" class="nav_link ">
-            <i class="fa-regular fa-gear"></i>
-            <span>Configuración</span>
-        </a>
+    <div class="details_container-table">
+        <div class="table_title">
+            <span>Productos más vendidos</span>
+        </div>
+        <div class="container_table">
+            <table class="table_content">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Cantidad</th>
+                        <th>Stock</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php for ($i=1; $i <= 10; $i++) { ?>
+                        <tr>
+                            <td>Producto 0<?php echo $i ?></td>
+                            <td>5</td>
+                            <td class="table_stock">
+                                <span>En Stock</span>
+                            </td>
+                        </tr>
+                    <?php } ?>
+                </tbody>
+            </table>
+        </div>
     </div>
-</div>
-<div class="body_sidebar">
-    Contenido
 </div>
