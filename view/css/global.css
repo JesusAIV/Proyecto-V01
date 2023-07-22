@@ -348,3 +348,93 @@ a {
     color: #FFFFFF;
     font-size: 0.8rem;
 }
+
+.button{
+    cursor: pointer;
+    background-color: var(--carolina-blue);
+    color: var(--polynesian-blue);
+    border: none;
+    border-radius: 15px;
+    padding: 10px 15px;
+    font-weight: 700;
+}
+
+.button i{
+    font-size: 1.1rem;
+    font-weight: 800;
+}
+
+.content_filters{
+    margin: 15px 0;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.filter{
+    display: flex;
+    align-items: center;
+    gap:15px;
+}
+.filter_name{
+    justify-content: end;
+}
+.filter_time{
+    justify-content: center;
+}
+.filter input,
+.filter select{
+    padding: 3px;
+    border-radius: 6px;
+    outline: none;
+    border: 1px solid var(--polynesian-blue);
+}
+.filter_name input,
+.filter_date input,
+.filter select{
+    padding: 5px;
+}
+.filter_name input,
+.filter_name-input{
+    width: 100%;
+}
+.container_pagination{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 35px;
+
+}
+.pagination_number{
+    margin: 0 10px ;
+}
+.filter_category{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.filter_category-from{
+    width: 100%;
+}
+.filter_category select{
+    width: 100%;
+
+}
+.btn_green{
+    background-color: var(--asparagus);
+}
+.btn_red{
+    background-color: var(--imperial-red);
+}
+.btn_yellow{
+background-color: var(--sunglow);
+}
+.filter_category select {
+    width: 100%;
+}
+
+.table_auto{
+    height: auto;
+    min-height: 400px;
+}
