@@ -54,7 +54,7 @@
                     <td>8</td>
                     <td>S/.250</td>
                     <td>
-                        <button class="button">
+                        <button class="button btn_action">
                             <i class="fa-light fa-eye"></i>
                         </button>
                     </td>

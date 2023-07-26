@@ -1,6 +1,3 @@
-<div class="content_button">
-    <button class="button">Nuevo Pedido</button>
-</div>
 <div class="content_filters">
     <div class="filter filter_date">
         <div class="filter_date-from">
@@ -23,16 +20,16 @@
         </div>
     </div>
     <div class="filter filter_name">
-    <div class="filter filter_category">
-        <div class="filter_category-from">
-            <select name="" id="">
-                <option value="" selected>Seleccione estado del pedido</option>
-                <option value="">Opcion 01</option>
-                <option value="">Opcion 02</option>
-                <option value="">Opcion 03</option>
-            </select>
+        <div class="filter filter_category">
+            <div class="filter_category-from">
+                <select name="" id="">
+                    <option value="" selected>Seleccione estado del pedido</option>
+                    <option value="">Opcion 01</option>
+                    <option value="">Opcion 02</option>
+                    <option value="">Opcion 03</option>
+                </select>
+            </div>
         </div>
-    </div>
         <div class="filter_name-button">
             <button class="button">Buscar</button>
         </div>
@@ -52,18 +49,18 @@
             </tr>
         </thead>
         <tbody>
-            <?php for ($i=1; $i <= 10; $i++) { ?>
+            <?php for ($i = 1; $i <= 10; $i++) { ?>
                 <tr>
                     <td>Cliente 01<?php echo $i ?></td>
                     <td>14/07/2023</td>
                     <td>13:20</td>
                     <td>2</td>
                     <td>S/.235.00</td>
-                    <td><div class="filter_name-button">
-            <button class="button">Cancelado</button>
-        </div></td>
                     <td>
-                        <button class="button">
+                        <button class="button">Cancelado</button>
+                    </td>
+                    <td>
+                        <button class="button btn_action">
                             <i class="fa-light fa-eye"></i>
                         </button>
                     </td>

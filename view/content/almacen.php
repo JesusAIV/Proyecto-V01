@@ -54,16 +54,16 @@
                     <td>computo</td>
                     <td>Hewlett-Packard  C</td>
                     <td>
-                        <button class="button">
+                        <button class="button btn_action">
                             <i class="fa-light fa-eye"></i>
                         </button>
-                        <button class="button btn_green">
+                        <button class="button btn_green btn_action" btn_action>
                             <i class="fa-regular fa-pen-to-square"></i>
                         </button>
-                        <button class="button btn_red">
+                        <button class="button btn_red btn_action">
                             <i class="fa-regular fa-trash"></i>
                         </button>
-                        <button class="button btn_yellow">
+                        <button class="button btn_yellow btn_action">
                             <i class="fa-regular fa-user-xmark"></i>
                         </button>
                     </td>
