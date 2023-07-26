@@ -42,10 +42,11 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar:vertical {
-    width:10px;
+    width: 10px;
 }
 
-body::-webkit-scrollbar-button:increment,body::-webkit-scrollbar-button {
+body::-webkit-scrollbar-button:increment,
+body::-webkit-scrollbar-button {
     display: none;
 }
 
@@ -154,19 +155,19 @@ a {
     overflow: hidden;
 }
 
-.option_profile .profile_data{
+.option_profile .profile_data {
     font-family: 'TimesNewRomance';
 }
 
-.profile_data .data_name{
+.profile_data .data_name {
     font-weight: 800;
 }
 
-.profile_data .data_role{
+.profile_data .data_role {
     font-weight: 100;
 }
 
-.section_options{
+.section_options {
     padding: 0.7rem 1rem;
     overflow: hidden;
     display: flex;
@@ -193,7 +194,7 @@ a {
     transition: .5s;
 }
 
-.section_sidebar-show{
+.section_sidebar-show {
     width: calc(var(--margin-sidebar) + 156px);
 }
 
@@ -205,12 +206,12 @@ a {
     padding: 0.7rem 0;
 }
 
-.section_logo img{
+.section_logo img {
     width: 40px;
     height: 40px;
 }
 
-.nav_link{
+.nav_link {
     display: grid;
     grid-template-columns: max-content max-content;
     align-items: center;
@@ -218,23 +219,23 @@ a {
     padding: 0.6rem 0.5rem 0.6rem 1.1rem;
 }
 
-.link_active{
+.link_active {
     background-color: #FFFFFF;
     color: var(--polynesian-blue) !important;
     border-radius: 1rem;
 }
 
-.body_sidebar{
+.body_sidebar {
     margin-top: 90px;
 }
 
-.reports_content{
+.reports_content {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.report_body{
+.report_body {
     background-color: var(--carolina-blue);
     border-radius: 15px;
     padding: 10px 25px;
@@ -243,11 +244,11 @@ a {
     color: var(--polynesian-blue);
 }
 
-.report_icon img{
+.report_icon img {
     width: 80%;
 }
 
-.repors_details{
+.repors_details {
     height: 400px;
     margin: 20px 0;
     display: grid;
@@ -261,20 +262,20 @@ a {
     padding: 0 10px;
 }
 
-.details_container-table{
+.details_container-table {
     background-color: var(--carolina-blue);
     border-radius: 20px;
     padding: 25px 20px;
     height: 400px;
 }
 
-.table_title span{
+.table_title span {
     color: var(--polynesian-blue);
     font-family: 'TimesNewRomance';
     font-size: 1.2rem;
 }
 
-.container_table{
+.container_table {
     height: 320px;
     margin: 15px 0;
     overflow-y: auto;
@@ -293,10 +294,11 @@ a {
 }
 
 .container_table::-webkit-scrollbar:vertical {
-    width:10px;
+    width: 10px;
 }
 
-.container_table::-webkit-scrollbar-button:increment,.container_table::-webkit-scrollbar-button {
+.container_table::-webkit-scrollbar-button:increment,
+.container_table::-webkit-scrollbar-button {
     display: none;
 }
 
@@ -319,7 +321,7 @@ a {
     scrollbar-width: thin;
 }
 
-.table_content{
+.table_content {
     border-collapse: collapse;
     width: 100%;
     height: auto;
@@ -328,19 +330,19 @@ a {
     overflow: hidden;
 }
 
-.table_content th{
+.table_content th {
     border-bottom: 1px solid var(--polynesian-blue);
     font-weight: 800;
 }
 
 .table_content th,
-.table_content td{
+.table_content td {
     padding: 10px 0;
     border-bottom: 1px solid var(--polynesian-blue);
     border-right: 1px solid var(--polynesian-blue);
 }
 
-.table_stock span{
+.table_stock span {
     /* background-color: var(--imperial-red); */
     background-color: var(--asparagus);
     padding: 5px 10px;
@@ -349,7 +351,7 @@ a {
     font-size: 0.8rem;
 }
 
-.button{
+.button {
     cursor: pointer;
     background-color: var(--carolina-blue);
     color: var(--polynesian-blue);
@@ -359,45 +361,51 @@ a {
     font-weight: 700;
 }
 
-.button i{
+.button i {
     font-size: 1.1rem;
     font-weight: 800;
 }
 
-.content_filters{
+.content_filters {
     margin: 15px 0;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
 }
 
-.filter{
+.filter {
     display: flex;
     align-items: center;
-    gap:15px;
+    gap: 15px;
 }
-.filter_name{
+
+.filter_name {
     justify-content: end;
 }
-.filter_time{
+
+.filter_time {
     justify-content: center;
 }
+
 .filter input,
-.filter select{
+.filter select {
     padding: 3px;
     border-radius: 6px;
     outline: none;
     border: 1px solid var(--polynesian-blue);
 }
+
 .filter_name input,
 .filter_date input,
-.filter select{
+.filter select {
     padding: 5px;
 }
+
 .filter_name input,
-.filter_name-input{
+.filter_name-input {
     width: 100%;
 }
-.container_pagination{
+
+.container_pagination {
     width: 100%;
     display: flex;
     align-items: center;
@@ -405,36 +413,172 @@ a {
     margin-top: 35px;
 
 }
-.pagination_number{
-    margin: 0 10px ;
+
+.pagination_number {
+    margin: 0 10px;
 }
-.filter_category{
+
+.filter_category {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
 }
-.filter_category-from{
-    width: 100%;
-}
-.filter_category select{
-    width: 100%;
 
+.filter_category-from {
+    width: 100%;
 }
-.btn_green{
-    background-color: var(--asparagus);
-}
-.btn_red{
-    background-color: var(--imperial-red);
-}
-.btn_yellow{
-background-color: var(--sunglow);
-}
+
 .filter_category select {
     width: 100%;
+
 }
 
-.table_auto{
+.btn_green {
+    background-color: var(--asparagus);
+}
+
+.btn_red {
+    background-color: var(--imperial-red);
+}
+
+.btn_yellow {
+    background-color: var(--sunglow);
+}
+
+.filter_category select {
+    width: 90%;
+}
+
+.table_auto {
     height: auto;
     min-height: 400px;
+}
+
+.btn_action {
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.btn_action i {
+    font-size: 1rem;
+}
+
+.fa-arrow-up {
+    color: var(--asparagus);
+}
+
+.company_header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.company_header-title span{
+    font-family: 'TimesNewRomance';
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+
+.company_logo{
+    display: flex;
+    margin: 10px 0;
+    gap: 20px;
+}
+
+.logo_company-title span{
+    font-family: 'TimesNewRomance';
+    font-weight: 800;
+    font-size: 1.1rem;
+}
+
+.logo_company-img{
+    width: 80px;
+    height: 80px;
+    border: 1px solid var(--polynesian-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.logo_company02 .logo_company-img,
+.logo_company02 .select_img{
+    width: 150px;
+    border-radius: 10px;
+}
+
+.select_img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, .5);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: none;
+}
+
+.select_img label{
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.select_img input{
+    display: none;
+}
+
+.company_data{
+    margin: 20px 0;
+}
+
+.company_data .input,
+.company_redes .input{
+    width: 70%;
+}
+
+.input{
+    padding: 4px 8px;
+    border-radius: 7px;
+    border: 1px solid var(--polynesian-blue);
+    outline: 1px solid var(--polynesian-blue);
+    font-family: 'TimesNewRomance';
+}
+
+.input_grid3{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.input_data{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-family: 'TimesNewRomance';
+}
+
+.redes_title{
+    font-family: 'TimesNewRomance';
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.button_edit{
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: end;
 }
