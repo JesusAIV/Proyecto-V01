@@ -1,38 +1,40 @@
 <?php
 
+$cuser = $gestion->cantidadRegistros('users');
+
 $datos = [
     [
-        'title' => 'Empleados',
+        'title' => 'users',
         'amount' => '20',
         'url' => 'svg/report_employees.svg'
     ],
     [
-        'title' => 'Clientes',
+        'title' => 'customer',
         'amount' => '12',
         'url' => 'svg/report_customers.svg'
     ],
     [
-        'title' => 'Ventas',
+        'title' => 'sales',
         'amount' => '29',
         'url' => 'svg/report_sale.svg'
     ],
     [
-        'title' => 'Compras',
+        'title' => 'shopping',
         'amount' => '31',
         'url' => 'svg/report_shopping.svg'
     ],
     [
-        'title' => 'Pedidos',
+        'title' => 'orders',
         'amount' => '36',
         'url' => 'svg/report_order.svg'
     ],
     [
-        'title' => 'Ingresos',
+        'title' => 'incomes',
         'amount' => '28',
         'url' => 'svg/report_income.svg'
     ],
     [
-        'title' => 'Gastos',
+        'title' => 'expenses',
         'amount' => '42',
         'url' => 'svg/report_loss.svg'
     ]
@@ -46,10 +48,10 @@ $datos = [
                 <img src="<?php $configC->rutaImage($dato['url']) ?>" alt="">
             </div>
             <div class="report_title">
-                <span><?php echo $dato['title'] ?></span>
+                <span><?php echo ucfirst($gestion->translate('es', $dato['title'])) ?></span>
             </div>
             <div class="report_amount">
-                <span><?php echo $dato['amount'] ?></span>
+                <span><?php echo $gestion->cantidadRegistros($dato['title']) ?></span>
             </div>
         </div>
     <?php } ?>
