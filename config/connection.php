@@ -2,7 +2,6 @@
 
 require_once "constantes.php";
 
-
 class Connection
 {
     private $hostDB;
@@ -23,8 +22,24 @@ class Connection
     public function connect()
     {
         try {
-        } catch (PDOException $e) {
+            $dsn ="mysql:host={$this->hostDB};dbname={$this->nameDB}";
 
+            $options = array(
+                PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+                PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ
+            );
+
+            $this->conn = new PDO($dsn,$this->userDB,$this->passDB,$options);
+
+            return $this->conn;
+
+        } catch (PDOException $e) {
+            throw new Exception($e->getMessage());
         }
+    }
+
+    public function getPDO()
+    {
+        return $this->conn;
     }
 }
