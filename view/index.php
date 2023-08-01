@@ -1,4 +1,5 @@
 <?php
+$xhr = false;
 require_once "./config/constantes.php";
 require_once "./controller/configController.php";
 require_once "./controller/gestionController.php";
